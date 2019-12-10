@@ -98,6 +98,7 @@ env:
   matrix:
     - CMAKE_BUILD_TYPE=Debug GTSAM_BUILD_UNSTABLE=OFF
     - CMAKE_BUILD_TYPE=Release
+    - CMAKE_BUILD_TYPE=Release GTSAM_WITH_TBB=On
 script:
   - bash .travis.sh -t
 

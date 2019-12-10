@@ -65,6 +65,7 @@ function test ()
       -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE \
       -DGTSAM_BUILD_TESTS=ON \
       -DGTSAM_BUILD_UNSTABLE=$GTSAM_BUILD_UNSTABLE \
+      -DGTSAM_WITH_TBB=${GTSAM_WITH_TBB:-OFF} \
       -DGTSAM_BUILD_EXAMPLES_ALWAYS=OFF \
       -DGTSAM_ALLOW_DEPRECATED_SINCE_V4=OFF
 
@@ -79,7 +80,7 @@ case $1 in
   -b)
     build
     ;;
-  -t)                      
+  -t)
     test
     ;;
 esac
